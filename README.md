@@ -1,2 +1,2 @@
 # 2imd-dev-portfolio
-Development 4 Front-end van Joris Hens
+Development 4 Front-end 
