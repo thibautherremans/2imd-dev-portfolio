@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* COLORS OF THE BOXES */
+#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8{
+    background-color: #f83259;
+}
+#b1{
+   background-color: #63f6f3;
+}
+#y1{
+    background-color:#ffff04;
+}
+
+/* GRID SIZING */
+
+#future{
+    display:grid;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#future div{
+    margin: 10px;
+    text-align: center;
+}
