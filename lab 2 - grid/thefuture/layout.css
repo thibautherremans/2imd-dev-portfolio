@@ -12,12 +12,16 @@
 #y1{
     background-color:#ffff04;
 }
+body div{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 /* GRID SIZING */
 
 #future{
     display:grid;
     grid-template-rows: repeat(10,1fr);
+    height: 800px;
 }
 
 #future div{
