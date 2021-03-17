@@ -59,12 +59,15 @@ class Note {
     createNote(e) {
         
         if(e.key === "Enter"){
-          epreventDefault();
+            console.log("zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaand")
+            e.preventDefault();
+
             let note = new Note(this.txtTodo.value);
             note.add(note.title);
             note.saveToStorage();
-
+            
             this.reset();
+            
 
         }
         
