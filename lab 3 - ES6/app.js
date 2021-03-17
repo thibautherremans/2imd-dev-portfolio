@@ -7,13 +7,14 @@ class Note {
   
     createElement(title) {
       let newNote = document.createElement("li");
+      newNote.addEventListener('click', this.remove.bind(newNote));
       newNote.innerHTML=title;
       // HINT🤩 newNote.addEventListener('click', this.remove.bind(newNote));
   
       return newNote;
     }
   
-    add() {
+    add(note) {
         let ul = document.getElementById("taskList");
         newNote.appendChild(document.createTextNode(new Note));
         ul.appendChild(newNote);
