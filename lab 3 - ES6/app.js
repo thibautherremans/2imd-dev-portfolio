@@ -5,16 +5,16 @@ class Note {
       // HINT🤩 this.element = this.createElement(title);
     }
   
-    createElement(title) {
+    createElement() {
       let newNote = document.createElement("li");
       newNote.addEventListener('click', this.remove.bind(newNote));
       newNote.innerHTML=title;
-      // HINT🤩 newNote.addEventListener('click', this.remove.bind(newNote));
-  
+       
       return newNote;
+      // HINT🤩 newNote.addEventListener('click', this.remove.bind(newNote));
     }
   
-    add(note) {
+    add(title) {
         let ul = document.getElementById("taskList");
         newNote.appendChild(document.createTextNode(new Note));
         ul.appendChild(newNote);
@@ -59,9 +59,12 @@ class Note {
     createNote(e) {
         
         if(e.key === "Enter"){
+          epreventDefault();
             let note = new Note(this.txtTodo.value);
-            note.add();
+            note.add(note.title);
             note.saveToStorage();
+
+            this.reset();
 
         }
         
