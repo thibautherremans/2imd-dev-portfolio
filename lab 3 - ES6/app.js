@@ -60,7 +60,6 @@ class Note {
     createNote(e) {
         
         if(e.key === "Enter"){
-            console.log("zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaand")
             e.preventDefault();
 
             let note = new Note(this.txtTodo.value);
@@ -82,6 +81,7 @@ class Note {
   
     reset() {
       // this function should reset the form / clear the text field
+      this.txtTodo.value = "";
     }
   }
   
