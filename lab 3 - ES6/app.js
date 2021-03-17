@@ -15,8 +15,11 @@ class Note {
   
     add(title) {
         let ul = document.getElementById("taskList");
-        newNote.appendChild(document.createTextNode(new Note));
-        ul.appendChild(newNote);
+        let textNode = document.createTextNode(title);
+
+
+        ul.appendChild(this.element);
+        this.element.appendChild(textNode);
       // HINT🤩
       // this function should append the note to the screen somehow
     }
