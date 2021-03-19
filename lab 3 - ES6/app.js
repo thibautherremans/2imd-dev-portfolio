@@ -30,6 +30,7 @@ class Note {
 
         notes.push(this.title);
         localStorage.setItem("notes", JSON.stringify(notes));
+
       // HINT🤩
       // localStorage only supports strings, not arrays
       // if you want to store arrays, look at JSON.parse and JSON.stringify
@@ -37,7 +38,7 @@ class Note {
   
     remove() {
         document.getElementById("taskList").removeChild(this);
-        
+
         const storage = window.localStorage;
         let notes = JSON.parse(storage.getItem("notes"));
         const index = notes.indexOf(this.innerHTML);
@@ -59,6 +60,7 @@ class Note {
         console.log("👊🏼 The Constructor!");
         this.txtTodo = document.querySelector("#taskInput");
         this.txtTodo.addEventListener("keypress", this.createNote.bind(this));
+        this.loadNotesFromStorage();
       // HINT🤩
       // pressing the enter key in the text field triggers the createNote function
       // this.txtTodo = ???
@@ -69,6 +71,19 @@ class Note {
     }
   
     loadNotesFromStorage() {
+
+        let note = localStorage.getItem("notes");
+        note = JSON.parse(note) || [];
+
+        if(note != null){
+          console.log("ddd");
+          for(let i = 0; i < note.length; i++) {
+
+            let newNote = new Note(note[i]);
+            newNote.add();
+          }
+        }
+        
       // HINT🤩
       // load all notes from storage here and add them to the screen
     }
