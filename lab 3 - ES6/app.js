@@ -2,6 +2,7 @@ class Note {
     constructor(title) {
       this.title = title;
       this.element = this.createElement(title);
+      console.log(this.title);
       // HINT🤩 this.element = this.createElement(title);
     }
   
@@ -78,9 +79,9 @@ class Note {
         if(note != null){
           console.log("ddd");
           for(let i = 0; i < note.length; i++) {
-
+            let title = note[i];
             let newNote = new Note(note[i]);
-            newNote.add();
+            newNote.add(title);
           }
         }
         
