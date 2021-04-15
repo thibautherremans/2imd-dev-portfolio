@@ -11,11 +11,36 @@
     
 }
 #shader{
-    height: 90px;
-    width: 728px;
+    height: 600px;
+    width: 300px;
     background-color: rgb(255, 255, 255,0.3);
     display: flex;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+#timebox{
+    width: 250px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+#footballtables{
+    width: 250px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+#team{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#team img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
 }
